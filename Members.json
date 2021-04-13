@@ -1,0 +1,20 @@
+{
+	"MembersList": ["cheese", "fune", "ari", "san", "gun", "jen"],
+	"MembersMedia": {
+		"cheese": "https://cdn.discordapp.com/attachments/813843024350019685/828132500219232322/chonky.gif",
+		"fune": "https://cdn.discordapp.com/emojis/809914815744180255.png?v=1",
+		"ari": "https://cdn.discordapp.com/emojis/769815557703860224.png?v=1",
+		"san": "https://cdn.discordapp.com/emojis/811420953775046736.gif?v=1",
+        "gun": "https://cdn.discordapp.com/attachments/784759983190966283/828193184579846174/gungun.gif",
+        "jen": "https://cdn.discordapp.com/attachments/829372312053612596/829657701789335552/ezgif.com-gif-maker_21.gif"
+		
+	},
+	"MembersCaption": {
+		"cheese": "Kinda chonky cat that likes thighs",
+		"fune": "Oui Baguette Oui Oui",
+		"ari": "LMAOAOAOAOAOOAOAOAOOAOA",
+		"san": "The resident artist at Pottercord",
+        "gun": "Shooting you in the heart with the cuteness :D",
+        "jen": "One of the rare cultured person that adores Light mode"
+	}
+}
