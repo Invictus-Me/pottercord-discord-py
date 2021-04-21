@@ -5,7 +5,7 @@ import matplotlib
 import pandas as pd
 import numpy as np
 from MemFunctions import getNishList, getSkwiList, checkSummer, getNimArts, YimYimIndexes
-from MemFunctions import MembersList, getMembers, amandify, hayafying
+from MemFunctions import MembersList, getMembers, amandify, hayafying, rpsResult
 
 import typing 
 
@@ -22,6 +22,7 @@ intents.members = True
 
 bot = commands.Bot(command_prefix = '.', description = description, intents = intents,case_insensitive=True)
 
+rpsChoice = ["rock", "paper", "scissor", "scissors", "r", "p", "s","page"]
 
 
 @bot.event
@@ -159,5 +160,14 @@ async def hayafy(ctx,*, arg:typing.Optional[str] = "all"):
 	else:
 		newMes = hayafying(arg)
 		await ctx.send(newMes)
+
+@bot.command(name = 'rps', aliases = ['rockpaperscissors'])
+async def rps(ctx, *, arg:typing.Optional[str] = "show"):
+	arg = arg.lower()
+	if arg != "show" and arg in rpsChoice:
+		ctx.send(rpsResult(arg))
+	else:
+		choices = " / ".join(rpsChoice)
+		ctx.send("Your Choices are  : " + choices)
 
 bot.run('ODEyNTcwMTEzNTE2NTAzMDgx.YDCq4w.MH34cXdLjh4b-HzhLVhCIKAEiMo')

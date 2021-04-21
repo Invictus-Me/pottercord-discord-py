@@ -27,6 +27,9 @@ YimYimList = {
  }
 YimYimIndexes = YimYimList.keys()
 
+rpsChoices = ["rock", "paper", "scissor"]
+rpsAlias = {"r": "rock", "p": "paper", "s" : "scissor", "scissors" : "scissor", "page": "paper"}
+rpsWin = {"rock" : "paper", "paper":"scissor", "scissor" : "rock"}
 
 def stripCaption(caption):
 	index = caption.find('#')
@@ -177,3 +180,15 @@ def hayafying(message):
     for i in range(0, random.randint(5,8)):
         k += haya[random.randint(0,len(haya)-1)]
     return (k)
+
+def rpsResult(choice):
+	if choice not in rpsChoices:
+		choice = rpsAlias[choice]
+	botChoice = random.choices(rpsChoices)
+	if botChoice == choice:
+		return("It's a Tie")
+	else:
+		if botChoice == rpsWin(choice):
+			return("Bot Wins")
+		else:
+			return("User Wins")
